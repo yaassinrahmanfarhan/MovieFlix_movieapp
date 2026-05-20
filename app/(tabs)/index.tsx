@@ -5,13 +5,15 @@ import SearchBar from "@/components/SearchBar";
 import {useRouter} from "expo-router";
 import useFetch from "@/services/usefetch";
 import { fetchMovies } from "@/services/api";
-import MoviesCard from "@/components/MoviesCard";
+import MoviesCard from "@/components/MovieCard";
 
 
 export default function Index() {
   const router = useRouter();
 
-  const {data: movies, loading: moviesLoading, error: moviesError} = useFetch(() => fetchMovies({
+  const {data: movies, 
+    loading: moviesLoading, 
+    error: moviesError} = useFetch(() => fetchMovies({
     query: ''
   }))
 
@@ -33,7 +35,7 @@ export default function Index() {
           <View className="flex-1 mt-5">
           <SearchBar 
             onPress={() => router.push("/search")}
-            placeholders = "Search for a Movie"
+            placeholder = "Search for a Movie"
           />
           <>
           <Text className="text-white font-bold mt-5 mb-3">Latest Movies</Text>
