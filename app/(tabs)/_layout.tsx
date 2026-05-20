@@ -1,6 +1,5 @@
 import { Tabs } from "expo-router";
 import { ImageBackground, Image, Text, View } from "react-native";
-
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 
@@ -73,7 +72,7 @@ export default function TabsLayout() {
       />
 
       <Tabs.Screen
-        name="save"
+        name="saved"
         options={{
           title: "Save",
           headerShown: false,
