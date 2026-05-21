@@ -26,7 +26,6 @@ const Search = () => {
     setSearchQuery(text);
   };
 
-  // Debounced search effect
   useEffect(() => {
     const timeoutId = setTimeout(async () => {
       if (searchQuery.trim()) {
